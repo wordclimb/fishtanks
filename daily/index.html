@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Fish Tanks Daily Tank</title>
+<meta name="description" content="Today's Daily Tank: fill the fish tanks so every row and column holds the right water. One answer, no guessing. A new board every day.">
+<meta name="theme-color" content="#E4F3FA">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Fish Tanks · Daily Tank">
+<meta property="og:description" content="Fill the tanks so every row and column holds the right water. Can you do it in the fewest taps?">
+<meta property="og:url" content="https://wordclimb.github.io/fishtanks/daily/">
+<meta property="og:image" content="https://wordclimb.github.io/fishtanks/daily/og-image.png">
+<meta property="og:image:width" content="1024">
+<meta property="og:image:height" content="500">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="icon.png">
+<link rel="apple-touch-icon" href="icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="daily.css">
+</head>
+<body>
+<div class="app">
+  <header class="top">
+    <a class="brand" href="../">Fish Tanks</a>
+    <span class="pill" id="dayLabel">Daily Tank</span>
+    <button class="chip" id="helpBtn" aria-label="How to play">?</button>
+  </header>
+  <p class="hud" id="hud" aria-live="polite"><span id="taps">0 taps</span><span id="clock">0:00</span></p>
+  <p class="message" id="message" role="status" aria-live="polite"></p>
+
+  <main class="board-wrap">
+    <div class="board" id="board" aria-label="Today's tanks"></div>
+  </main>
+
+  <div class="controls">
+    <button class="tool" id="undoBtn" aria-label="Undo">Undo</button>
+    <button class="tool" id="restartBtn" aria-label="Start over">Restart</button>
+  </div>
+  <button class="link hidden" id="resultsBtn">See your result</button>
+  <p class="foot">The same Daily Tank as the app. A new board every day at midnight, your time.</p>
+</div>
+
+<div class="scrim hidden" id="helpModal" role="dialog" aria-modal="true" aria-labelledby="helpTitle">
+  <div class="card">
+    <h2 id="helpTitle">How to play</h2>
+    <p><b>Tap a square</b> and its tank fills with water up to there. Tap the top of the water to lower it.</p>
+    <p><b>Water lies flat:</b> each tank has one water line, and every square of the tank on or below it is water.</p>
+    <p>The numbers say how many water squares each <b>row and column</b> holds. A <b>?</b> can hold any amount.</p>
+    <p>Too much water? <b>Tap the top</b> of it to lower it a row, or Undo. Every board has <b>one answer</b>, and logic always finds it.</p>
+    <p><b>Best</b> is the fewest taps possible: one per tank that holds water. Match it for a <b>Perfect</b>.</p>
+    <button class="btn hero" id="helpClose">Let's play</button>
+  </div>
+</div>
+
+<div class="scrim hidden" id="resultModal" role="dialog" aria-modal="true" aria-labelledby="resultTitle">
+  <div class="card">
+    <p class="kicker" id="resultDay"></p>
+    <h2 id="resultTitle">Perfect!</h2>
+    <div class="stats">
+      <div><b id="statTaps"></b><span>taps / best</span></div>
+      <div><b id="statTime"></b><span>time</span></div>
+      <div><b id="statStreak"></b><span>day streak</span></div>
+    </div>
+    <div class="dots" id="resultDots"></div>
+    <p class="next" id="nextIn"></p>
+    <button class="btn hero" id="shareBtn">Share</button>
+    <a class="btn" id="getApp" href="https://play.google.com/apps/testing/com.starladdergames.fishtanks">Play more on Android</a>
+    <p class="small" id="ctaNote">Fish Tanks is in testing on Google Play: join the testers to get 500 levels, 57 fish to collect and the Daily in the app.</p>
+    <button class="link" id="resultClose">Close</button>
+  </div>
+</div>
+
+<div class="toast hidden" id="toast">Copied!</div>
+
+<script src="data.js"></script>
+<script src="rules.js"></script>
+<script src="daily.js"></script>
+</body>
+</html>

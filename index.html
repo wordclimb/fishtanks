@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fish Tanks · Water Logic Puzzle</title>
+<meta name="description" content="Fish Tanks: a calm water logic puzzle. Fill the tanks so every row and column holds the right water. One answer, no guessing, a new Daily Tank every day.">
+<meta property="og:title" content="Fish Tanks · Water Logic Puzzle">
+<meta property="og:description" content="Fill the tanks so every row and column holds the right water. Play today's Daily Tank in your browser.">
+<meta property="og:image" content="https://wordclimb.github.io/fishtanks/daily/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root { --ink: #21465C; --soft: #5C7C8F; --bg: #E4F3FA; --accent: #F28A3C; --water: #4DA3E2; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font-family: "Fredoka", system-ui, sans-serif; }
+  main { max-width: 760px; margin: 0 auto; padding: 32px 16px 48px; text-align: center; }
+  .icon { width: 128px; height: 128px; border-radius: 28px; box-shadow: 0 14px 34px rgba(33,70,92,.2); }
+  h1 { font-size: 48px; margin: 18px 0 4px; }
+  .tag { font-size: 22px; color: var(--soft); margin: 0 0 24px; }
+  .cta { display: inline-block; margin: 6px; padding: 16px 26px; border-radius: 18px; font-size: 20px; font-weight: 700; text-decoration: none; }
+  .hero { background: var(--accent); color: #fff; box-shadow: 0 8px 20px rgba(242,138,60,.35); }
+  .soft { background: #fff; color: var(--ink); box-shadow: 0 6px 18px rgba(33,70,92,.12); }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; margin: 34px 0; text-align: left; }
+  .card { background: #fff; border-radius: 20px; padding: 18px; box-shadow: 0 6px 18px rgba(33,70,92,.08); }
+  .card b { display: block; font-size: 19px; margin-bottom: 4px; }
+  .card span { color: var(--soft); }
+  .shots { display: flex; gap: 12px; overflow-x: auto; padding: 8px 2px 16px; scroll-snap-type: x mandatory; }
+  .shots img { height: 420px; border-radius: 18px; scroll-snap-align: center; box-shadow: 0 8px 24px rgba(33,70,92,.15); }
+  footer { color: var(--soft); font-size: 15px; margin-top: 30px; }
+  footer a { color: var(--soft); }
+</style>
+</head>
+<body>
+<main>
+  <img class="icon" src="icon.png" alt="Fish Tanks icon">
+  <h1>Fish Tanks</h1>
+  <p class="tag">A calm water logic puzzle. Fill the tanks so every row and column holds the right water.</p>
+  <a class="cta hero" href="daily/">Play today's Daily Tank</a>
+  <a class="cta soft" id="playLink" href="https://play.google.com/apps/testing/com.starladdergames.fishtanks">Get it on Android</a>
+
+  <div class="grid">
+    <div class="card"><b>One answer, no guessing</b><span>Every board is solved by logic alone. We prove it for every single one.</span></div>
+    <div class="card"><b>500 levels, 7 waters</b><span>From a little pond at 5x5 to the deep sea at 10x10, then endless tanks.</span></div>
+    <div class="card"><b>A Daily Tank</b><span>One board for everyone, every day. Solve it in the fewest taps, keep your streak, share your result.</span></div>
+    <div class="card"><b>Your own aquarium</b><span>Hatch, feed and raise 80 fish and sea creatures. Every 10 levels lays an egg.</span></div>
+    <div class="card"><b>Calm and fair</b><span>No lives, no timers in the levels, no banner ads. Remove Ads is one purchase.</span></div>
+    <div class="card"><b>Free hints</b><span>A nudge shows where to look and why. Show Me shows the move.</span></div>
+  </div>
+
+  <div class="shots" aria-label="Screenshots">
+    <img src="shots/01_play.png" alt="A board being filled">
+    <img src="shots/02_daily.png" alt="A Daily Tank result">
+    <img src="shots/04_tank.png" alt="The home tank full of fish">
+    <img src="shots/06_big.png" alt="A 10x10 board">
+  </div>
+
+  <footer>
+    Made by Star Ladder Games · <a href="mailto:starladdergames@gmail.com">starladdergames@gmail.com</a><br>
+    <a href="legal/privacy-policy.html">Privacy policy</a> · <a href="legal/terms-of-use.html">Terms of use</a>
+  </footer>
+</main>
+</body>
+</html>
